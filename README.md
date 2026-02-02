@@ -4,9 +4,11 @@ My personal configuration files.
 
 ## What's included
 
-- **zsh**: Shell configuration (`.zshrc`, `.zshenv`)
+- **zsh**: Shell configuration (`.zshrc`, `.zshenv`, `.zprofile`)
+- **profile**: Shell profile (`.profile` - Cargo/Rust environment)
 - **git**: Git configuration
 - **nvim**: Neovim configuration
+- **Brewfile**: Homebrew package list for reproducible setup
 
 ## Installation
 
@@ -29,11 +31,14 @@ The install script will:
 dotfiles/
 ├── zsh/
 │   ├── zshrc
-│   └── zshenv
+│   ├── zshenv
+│   └── zprofile
 ├── git/
 │   └── gitconfig
 ├── nvim/
 │   └── (neovim config files)
+├── profile
+├── Brewfile
 ├── install.sh
 └── README.md
 ```

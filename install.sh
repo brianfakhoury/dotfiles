@@ -36,6 +36,10 @@ link_file() {
 # Zsh config
 link_file "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/zsh/zshenv" "$HOME/.zshenv"
+link_file "$DOTFILES_DIR/zsh/zprofile" "$HOME/.zprofile"
+
+# Shell profile
+link_file "$DOTFILES_DIR/profile" "$HOME/.profile"
 
 # Git config
 link_file "$DOTFILES_DIR/git/gitconfig" "$HOME/.gitconfig"
