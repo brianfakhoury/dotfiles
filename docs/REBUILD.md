@@ -34,7 +34,15 @@ Edit `~/.gitconfig.local` and set your machine-local Git identity values.
 scripts/verify.sh
 ```
 
-## 5) Capture current machine state
+## 5) Enable git hooks
+
+```bash
+scripts/setup-git-hooks.sh
+```
+
+This enables the repo's versioned pre-commit hook (`.githooks/pre-commit`).
+
+## 6) Capture current machine state
 
 ```bash
 scripts/snapshot.sh

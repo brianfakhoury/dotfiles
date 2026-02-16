@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+echo "[pre-commit] running quick verification"
+scripts/verify.sh --quick
+
+echo "[pre-commit] checking for private identity leakage"
+local_email="$(git config --get user.email || true)"
+if [ -n "$local_email" ] && git diff --cached --text | grep -F -- "$local_email" >/dev/null; then
+  echo "[pre-commit] FAIL: staged changes include your local git email ($local_email)" >&2
+  echo "[pre-commit] Move identity values to ~/.gitconfig.local and keep repo files redacted." >&2
+  exit 1
+fi
+
+if [ -f state/git-global-config.txt ] && grep -E 'user\.(name|email)=' state/git-global-config.txt | grep -vq '<redacted>'; then
+  echo "[pre-commit] FAIL: state/git-global-config.txt contains unredacted user identity" >&2
+  exit 1
+fi
+
+echo "[pre-commit] ok"

@@ -81,6 +81,9 @@ fi
 log "linking dotfiles"
 "$DOTFILES_DIR/install.sh"
 
+log "configuring repository git hooks"
+"$DOTFILES_DIR/scripts/setup-git-hooks.sh"
+
 if [ "$SKIP_NVIM" -eq 0 ] && has_cmd nvim; then
   log "syncing Neovim plugins"
   nvim --headless '+Lazy! sync' +qa || log "neovim sync failed; open nvim manually to finish plugin install"

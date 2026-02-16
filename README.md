@@ -11,6 +11,7 @@ Personal machine configuration focused on deterministic rebuilds and state captu
 - **Brewfile**: Homebrew package list for reproducible setup
 - **scripts**: Bootstrap, snapshot, and verification workflows
 - **state/**: Generated machine snapshots (tool versions, package state, extensions)
+- **.githooks/**: Versioned git hooks for commit-time checks
 
 ## Privacy defaults
 
@@ -52,6 +53,12 @@ Verify current setup:
 
 ```bash
 scripts/verify.sh
+```
+
+Enable git hooks manually (if needed):
+
+```bash
+scripts/setup-git-hooks.sh
 ```
 
 Capture machine state:
@@ -119,6 +126,7 @@ dotfiles/
 - Use `./install.sh --dry-run` to preview every action before applying changes.
 - Host-specific values belong in `~/.machine.local` (created from `machine.local.example` on first install).
 - Git identity belongs in `~/.gitconfig.local` (created from `git/gitconfig.local.example`).
+- `scripts/bootstrap.sh` enables versioned git hooks (`core.hooksPath=.githooks`) for commit-time verification.
 - Symlinks allow changes to sync automatically: edit files in repo, changes apply immediately.
 - Private keys and secrets are intentionally excluded.
 - To update: `git pull` in the dotfiles directory.
