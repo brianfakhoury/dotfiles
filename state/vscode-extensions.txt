@@ -1,0 +1,7 @@
+anysphere.cpptools
+anysphere.cursorpyright
+asvetliakov.vscode-neovim
+james-yu.latex-workshop
+ms-python.debugpy
+ms-python.python
+vadimcn.vscode-lldb

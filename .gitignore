@@ -11,6 +11,9 @@
 .env.*
 secrets/
 *.token
+machine.local
+state/*.tmp
+.nvimlog
 
 # OS files
 .DS_Store

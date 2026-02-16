@@ -1,0 +1,9 @@
+# Machine-local overrides for host-specific values.
+# This file is copied to ~/.machine.local by install.sh if it does not exist.
+# Keep secrets and one-off local paths here, not in repo-tracked configs.
+
+# Examples:
+# export OPENAI_API_KEY="replace-me"
+# export ANTHROPIC_API_KEY="replace-me"
+# export PATH="$HOME/bin:$PATH"
+# alias ll='ls -lah'

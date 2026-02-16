@@ -1,0 +1,12 @@
+# Snapshot generated at 2026-02-15T05:04:22Z
+agent	2026.02.13-41ac335
+codex	codex-cli 0.101.0
+claude	2.1.27 (Claude Code)
+gemini	0.26.0
+ollama	version unknown
+uv	uv 0.9.16 (Homebrew 2025-12-06)
+python3	Python 3.14.2
+node	v22.15.1
+npm	10.9.2
+nvim	NVIM v0.11.5
+gh	gh version 2.86.0 (2026-01-21)

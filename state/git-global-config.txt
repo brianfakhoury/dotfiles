@@ -1,0 +1,5 @@
+file:$HOME/.gitconfig	include.path=~/.gitconfig.local
+file:$HOME/.gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:$HOME/.gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:$HOME/.gitconfig	filter.lfs.process=git-lfs filter-process
+file:$HOME/.gitconfig	filter.lfs.required=true
